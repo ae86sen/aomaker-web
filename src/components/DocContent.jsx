@@ -47,8 +47,13 @@ const DocContent = () => {
         // 从映射表中获取文档文件名
         const docFileName = docMap[fullPath] || 'introduction.md';
         
+        // 根据环境选择不同的基础路径
+        const basePath = import.meta.env.MODE === 'production' 
+          ? '/content/docs/' 
+          : '/src/content/docs/';
+        
         // 加载文档
-        const response = await fetch(`/src/content/docs/${docFileName}`);
+        const response = await fetch(`${basePath}${docFileName}`);
         
         if (!response.ok) {
           throw new Error(`无法加载文档: ${response.status} ${response.statusText}`);
