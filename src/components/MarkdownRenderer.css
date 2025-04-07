@@ -1,0 +1,218 @@
+/* Markdown引用块样式 */
+
+/* 基础引用块样式 */
+.admonition {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid;
+  background-color: rgba(235, 235, 235, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .admonition {
+  background-color: rgba(30, 30, 30, 0.4);
+}
+
+/* 引用块标题 */
+.admonition-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* 图标样式 */
+.admonition-icon {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* 内容样式 */
+.admonition-content {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* 警告类型 */
+.admonition-warning {
+  border-left-color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+.dark .admonition-warning {
+  background-color: rgba(245, 158, 11, 0.05);
+}
+
+.admonition-warning .admonition-heading {
+  color: #d97706;
+}
+
+/* 重要类型 */
+.admonition-important {
+  border-left-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.dark .admonition-important {
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.admonition-important .admonition-heading {
+  color: #dc2626;
+}
+
+/* 注意类型 */
+.admonition-caution {
+  border-left-color: #f97316;
+  background-color: rgba(249, 115, 22, 0.1);
+}
+
+.dark .admonition-caution {
+  background-color: rgba(249, 115, 22, 0.05);
+}
+
+.admonition-caution .admonition-heading {
+  color: #ea580c;
+}
+
+/* 提示类型 */
+.admonition-note {
+  border-left-color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.dark .admonition-note {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.admonition-note .admonition-heading {
+  color: #2563eb;
+}
+
+/* 技巧类型 */
+.admonition-tip {
+  border-left-color: #10b981;
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.dark .admonition-tip {
+  background-color: rgba(16, 185, 129, 0.05);
+}
+
+.admonition-tip .admonition-heading {
+  color: #059669;
+}
+
+/* 引用块内部元素样式 */
+.admonition p {
+  margin: 0.5rem 0;
+}
+
+.admonition ul,
+.admonition ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 640px) {
+  .admonition {
+    padding: 0.75rem;
+  }
+  
+  .admonition-heading {
+    font-size: 0.95rem;
+  }
+  
+  .admonition-content {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mermaid图表样式 */
+.mermaid-container {
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.mermaid-diagram {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(250, 250, 250, 0.5);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow: auto;
+}
+
+.dark .mermaid-diagram {
+  background-color: rgba(30, 30, 30, 0.5);
+}
+
+/* Mermaid生成的SVG样式 */
+.mermaid-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mermaid错误消息样式 */
+.mermaid-diagram .error-message {
+  color: #ef4444;
+  padding: 1rem;
+  border: 1px dashed #ef4444;
+  border-radius: 0.5rem;
+  background-color: rgba(239, 68, 68, 0.1);
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.dark .mermaid-diagram .error-message {
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+/* Mermaid回退样式 */
+.mermaid-fallback {
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  background-color: #f9fafb;
+}
+
+.dark .mermaid-fallback {
+  border-color: #374151;
+  background-color: #1f2937;
+}
+
+.mermaid-error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.mermaid-code {
+  background-color: #f3f4f6;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.dark .mermaid-code {
+  background-color: #111827;
+  color: #e5e7eb;
+}
+
+/* Mermaid内部容器样式 */
+.mermaid-inner-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+} 
