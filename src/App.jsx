@@ -11,6 +11,7 @@ import Features from './pages/Features';
 import Blog from './pages/Blog';
 import Community from './pages/Community';
 import NotFound from './pages/NotFound';
+import Releases from './pages/Releases';
 
 // 引入通用文档组件
 import DocContent from './components/DocContent';
@@ -24,6 +25,7 @@ function App() {
         <Route path="/features" element={<Features />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/releases" element={<Releases />} />
         
         {/* 文档布局下的路由 - 使用参数化路由 */}
         <Route path="/docs" element={<DocLayout />}>

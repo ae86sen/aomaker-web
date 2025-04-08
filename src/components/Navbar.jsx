@@ -38,6 +38,7 @@ const Navbar = () => {
     { name: '文档', to: '/docs' },
     // { name: '博客', to: '/blog' },
     { name: '社区', to: '/community' },
+    { name: '发布日志', to: '/releases' },
   ];
 
   return (

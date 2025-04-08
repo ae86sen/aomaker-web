@@ -310,14 +310,44 @@ const MarkdownRenderer = ({ content }) => {
           );
         },
         // 自定义标题渲染
-        h1({ node, ...props }) {
-          return <h1 className="text-3xl font-bold mt-8 mb-4" {...props} />;
+        h1({ node, children, ...props }) {
+          // 处理可能存在的ID
+          const idMatch = String(children).match(/{#([\w-]+)}/);
+          let id = null;
+          let cleanChildren = children;
+          
+          if (idMatch) {
+            id = idMatch[1];
+            cleanChildren = String(children).replace(/{#[\w-]+}/, '').trim();
+          }
+          
+          return <h1 id={id} className="text-3xl font-bold mt-8 mb-4" {...props}>{cleanChildren}</h1>;
         },
-        h2({ node, ...props }) {
-          return <h2 className="text-2xl font-bold mt-6 mb-3" {...props} />;
+        h2({ node, children, ...props }) {
+          // 处理可能存在的ID
+          const idMatch = String(children).match(/{#([\w-]+)}/);
+          let id = null;
+          let cleanChildren = children;
+          
+          if (idMatch) {
+            id = idMatch[1];
+            cleanChildren = String(children).replace(/{#[\w-]+}/, '').trim();
+          }
+          
+          return <h2 id={id} className="text-2xl font-bold mt-6 mb-3" {...props}>{cleanChildren}</h2>;
         },
-        h3({ node, ...props }) {
-          return <h3 className="text-xl font-bold mt-5 mb-2" {...props} />;
+        h3({ node, children, ...props }) {
+          // 处理可能存在的ID
+          const idMatch = String(children).match(/{#([\w-]+)}/);
+          let id = null;
+          let cleanChildren = children;
+          
+          if (idMatch) {
+            id = idMatch[1];
+            cleanChildren = String(children).replace(/{#[\w-]+}/, '').trim();
+          }
+          
+          return <h3 id={id} className="text-xl font-bold mt-5 mb-2" {...props}>{cleanChildren}</h3>;
         },
         // 自定义表格渲染
         table({ node, ...props }) {
