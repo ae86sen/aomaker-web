@@ -16,7 +16,7 @@ const Home = () => {
             <p className="mt-6 max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-300">
               通过『声明式建模+文档化驱动』范式，彻底解决企业级接口自动化测试中的维护难题，提升测试效率
             </p>
-            <div className="mt-10 flex justify-center">
+            <div className="mt-10 flex justify-center relative z-10">
               <Link
                 to="/docs/quick-start"
                 className="btn-primary flex items-center"

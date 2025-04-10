@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Outlet, Link, useLocation } from 'react-router-dom';
+import { Outlet, Link, useLocation, ScrollRestoration } from 'react-router-dom';
 import { 
   BookOpenIcon,
   BoltIcon,
@@ -266,9 +266,10 @@ const DocLayout = () => {
         )}
         
         {/* 主内容 */}
-        <main className="flex-1 p-4 md:p-8">
+        <main className="flex-1 p-4 md:p-8 overflow-y-auto">
           <div className="max-w-4xl mx-auto">
             <Outlet />
+            <ScrollRestoration />
           </div>
         </main>
       </div>

@@ -57,13 +57,13 @@ const Footer = () => {
                   博客
                 </Link>
               </li> */}
-              <li>
+              {/* <li>
                 <Link to="/community" className="text-base text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
                   社区
                 </Link>
-              </li>
+              </li> */}
               <li>
-                <a href="https://github.com/aomaker/aomaker" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
+                <a href="https://github.com/ae86sen/aomaker" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
                   GitHub
                 </a>
               </li>

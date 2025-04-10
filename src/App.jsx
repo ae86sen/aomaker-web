@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 // 引入布局组件
 import MainLayout from './layouts/MainLayout';
@@ -16,28 +16,27 @@ import Releases from './pages/Releases';
 // 引入通用文档组件
 import DocContent from './components/DocContent';
 
-function App() {
-  return (
-    <Routes>
-      {/* 主布局下的路由 */}
-      <Route element={<MainLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/features" element={<Features />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/community" element={<Community />} />
-        <Route path="/releases" element={<Releases />} />
-        
-        {/* 文档布局下的路由 - 使用参数化路由 */}
-        <Route path="/docs" element={<DocLayout />}>
-          <Route index element={<DocContent />} /> {/* 默认文档页面 */}
-          <Route path=":docId/*" element={<DocContent />} /> {/* 动态匹配所有文档路径 */}
-        </Route>
-        
-        {/* 404页面 */}
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
-  );
-}
+// Export route configuration instead of the component
+const routeConfig = [
+  {
+    element: <MainLayout />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/features", element: <Features /> },
+      { path: "/blog", element: <Blog /> },
+      { path: "/community", element: <Community /> },
+      { path: "/releases", element: <Releases /> },
+      {
+        path: "/docs",
+        element: <DocLayout />,
+        children: [
+          { index: true, element: <DocContent /> },
+          { path: ":docId/*", element: <DocContent /> }
+        ]
+      },
+    ]
+  },
+  { path: "*", element: <NotFound /> }
+];
 
-export default App; 
+export default routeConfig; 
