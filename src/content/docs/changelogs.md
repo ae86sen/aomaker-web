@@ -1,3 +1,13 @@
+## 2025.4.17- v3.0.0 beta0.15
+- 新增 Mock Server中增加登录接口，部分mock接口增加权限校验
+- 新增 aomaker图标和logo，更新dashboard页面logo
+- 增强 JsonSchemaParser的健壮性，在JsonSchemaParser类中添加递归深度检查，以防止在处理schema时出现过深递归导致的潜在问题。返回类型为Any以确保稳定性。
+- 修复 接口定义中response字段type_hint为列表嵌套自定义模型时，导入信息不对的问题
+- 修复 流式响应异常处理的问题
+- 优化 OpenAPIParser类中的响应解析逻辑，增加对响应内容存在性的检查，确保在解析schema时捕获异常并记录错误
+- 修复 anyOf 或 oneOf 只包含一个非 null 类型和一个 null 类型的时，生成的type_hint，重复生成Optional的问题
+- 优化 类名规范化函数，增强对Unicode字符的支持，处理非法字符和数字开头的情况，确保生成有效的Python类名
+
 ## 2025.4.3- v3.0.0 beta0.14
 - 优化 接口类名符合规范化处理逻辑
 - 增强 类型映射，支持更多JSON schema format 关键字
