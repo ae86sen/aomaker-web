@@ -13,4 +13,6 @@ aomaker service start --web
 - `--web` : 打开dashboard页面
 - `--port`: 指定服务端口号，默认8888
 
-![](https://picgo2listen.oss-cn-beijing.aliyuncs.com/imgs/aomaker%20v3.0%E6%96%B0%E5%8A%9F%E8%83%BD%EF%BC%88%E5%90%ABquick%20start%EF%BC%89-20250316.png)
+![image.png](https://picgo2listen.oss-cn-beijing.aliyuncs.com/imgs/20250428204248.png)
+
+![image.png](https://picgo2listen.oss-cn-beijing.aliyuncs.com/imgs/20250428201246.png)

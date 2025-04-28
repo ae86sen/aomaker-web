@@ -189,21 +189,16 @@ def test_create_user():
 arun -e mock -m mock_api
 ```
 
-## 6.查看aomaker live console（可选）
+## 6.查看aomaker dashboard（可选）
 可以在开始运行用例前，打开该页面，可以实时查看各个子进程的用例执行进度和日志。
 打开方式：
 ```bash
 aomaker service start --web
 ```
-![](https://picgo2listen.oss-cn-beijing.aliyuncs.com/imgs/aomaker%20v3.0%E6%96%B0%E5%8A%9F%E8%83%BD%EF%BC%88%E5%90%ABquick%20start%EF%BC%89-20250316.png)
+![image.png](https://picgo2listen.oss-cn-beijing.aliyuncs.com/imgs/20250428204248.png)
 
 
 
 ## 后续步骤
 
-恭喜！你已经了解了 AOmaker 的基本使用方法。接下来你可以：
-
-- 查看 [API 建模](/docs/api-modeling) 文档，学习更多接口定义方法
-- 了解 [环境管理](/docs/environments)，实现多环境测试
-- 探索 [插件系统](/docs/plugins)，扩展 AOmaker 功能
-- 访问 [GitHub 仓库](https://github.com/aomaker/aomaker) 获取更多示例 
+恭喜！你已经了解了 AOmaker 的基本使用方法，接下来你可以了解更多基础特性和高级特性。
