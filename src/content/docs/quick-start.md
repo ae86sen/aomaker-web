@@ -8,7 +8,11 @@
 >2.先创建一个虚拟环境，用venv，conda，uv（推荐），poetry都行  
 >3.确保进到这个虚拟环境后，再安装aomaker  
 
+## 0.安装
 
+```bash
+pip install aomaker
+```
 
 ## 1.创建脚手架
 

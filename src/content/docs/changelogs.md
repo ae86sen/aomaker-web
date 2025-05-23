@@ -1,3 +1,5 @@
+## 2025.4.17- v3.0.0 正式发布🚀
+
 ## 2025.4.17- v3.0.0 beta0.15
 - 新增 Mock Server中增加登录接口，部分mock接口增加权限校验
 - 新增 aomaker图标和logo，更新dashboard页面logo
