@@ -1,3 +1,10 @@
+##  2025.6.11- v3.0.1
+- fix: 修复Union类型解析失败的问题，增加注册Union类型的结构化hook，增加对复杂Union类型的支持
+- fix: 修复模型field alias为python keyword报错的问题
+- fix: 修复python非法字段名（python关键字，连接符等）无法序列化的问题
+- fix: 修复request body/ response中properties为空时解析报错的问题
+- fix: 修复python3.12无法安装aomaker的问题
+
 ## 2025.4.17- v3.0.0 正式发布🚀
 
 ## 2025.4.17- v3.0.0 beta0.15
