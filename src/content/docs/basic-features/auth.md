@@ -124,10 +124,13 @@ class Login(BaseLogin):
 UserAPI().get_profile()  # headers: Authorization
 
 # 特殊请求覆盖头（如测试无鉴权场景）
-UserAPI().send(
-    headers={"X-Custom": "value"}, 
+UserAPI(headers={"X-Custom": "value"}).send(
     override_headers=True
 )  # 最终headers只有X-Custom
+
+# 原请求头不覆盖，只是追加内容
+UserAPI(headers={"X-Custom": "value"}).send()
+
 ```
 
 #### 场景2：作用域级头管理
